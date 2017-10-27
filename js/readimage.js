@@ -109,7 +109,7 @@ function rotateImg(Orientation,ctx,canvas,that,w,h) {
    			if(display == "none") {
    				document.getElementById('place1-img').src = base64;
    				document.getElementById('place1').style.display = "block";
-   				/*drag(document.getElementById('place1-img'));*/
+   				drag(document.getElementById('place1-img'));
    			}else {
 				document.getElementById('place1-img').src = base64;
                 drag(document.getElementById('place1-img'));
@@ -167,7 +167,7 @@ function addImg(){
 }
 document.addEventListener('DOMContentLoaded',function(){
 	drag(oDiv);
-	drag(nodes);
+	/*drag(nodes);*/
 },false);
 
 /*合成图片*/
@@ -229,7 +229,7 @@ function draw(fn){
 			img.crossOrigin="anonymous";
 			img.onload =function(){
                 if(n == 0){
-                    ctx.drawImage(img,nodes.offsetLeft,nodes.offsetTop,nodes.clientWidth,nodes.clientHeight);
+                    ctx.drawImage(img,oPicture.offsetLeft,oPicture.offsetTop,oPicture.clientWidth,oPicture.clientHeight);
                 }else if(n == 1){
                     ctx.drawImage(img,0,0,oLayer.clientWidth,oLayer.clientHeight);
                 }else if(n == 2){

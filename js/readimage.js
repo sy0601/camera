@@ -229,7 +229,7 @@ function draw(fn){
 			img.crossOrigin="anonymous";
 			img.onload =function(){
                 if(n == 0){
-                    ctx.drawImage(img,oPicture.offsetLeft,nodes.offsetTop,oPicture.clientWidth,oPicture.clientHeight);
+                    ctx.drawImage(img,nodes.offsetLeft,nodes.offsetTop,oPicture.clientWidth,oPicture.clientHeight);
                 }else if(n == 1){
                     ctx.drawImage(img,0,0,oLayer.clientWidth,oLayer.clientHeight);
                 }else if(n == 2){

@@ -34,8 +34,8 @@
       <file leaf-file-name="readimage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/readimage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="231" column="43" lean-forward="false" selection-start-line="231" selection-start-column="43" selection-end-line="231" selection-end-column="43" />
+            <state relative-caret-position="529">
+              <caret line="242" column="54" lean-forward="true" selection-start-line="242" selection-start-column="54" selection-end-line="242" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -158,12 +158,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1509099991373</updated>
-      <workItem from="1509099993529" duration="1883000" />
+      <workItem from="1509099993529" duration="2108000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1883000" />
+    <option name="totallyTimeSpent" value="2108000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="161" y="0" width="1752" height="1040" extended-state="0" />
@@ -220,8 +220,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/readimage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="231" column="43" lean-forward="false" selection-start-line="231" selection-start-column="43" selection-end-line="231" selection-end-column="43" />
+        <state relative-caret-position="529">
+          <caret line="242" column="54" lean-forward="true" selection-start-line="242" selection-start-column="54" selection-end-line="242" selection-end-column="54" />
           <folding />
         </state>
       </provider>

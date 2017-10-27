@@ -68,7 +68,7 @@ var file_upload=function (picture,file) {
 var nodes = document.getElementById("pictureInfo");
 function rotateImg(Orientation,ctx,canvas,that,w,h) {
 //	alert(Orientation);
-	/*if(Orientation == "6") {
+	if(Orientation == "6") {
 		$(canvas).attr({width : w/2, height : h});
     	ctx.translate(270, 0);
 	    var angle = 90;
@@ -87,7 +87,7 @@ function rotateImg(Orientation,ctx,canvas,that,w,h) {
 	
 	}
     var strLength=base64.length;
-    var fileLength=parseInt(strLength-(strLength/8)*2);*/
+    var fileLength=parseInt(strLength-(strLength/8)*2);
 	
 	//图片大小
     var oriSize = (fileLength / 1024).toFixed(1);

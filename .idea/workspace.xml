@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="62d62922-530f-46fd-ad95-6f4468f9538a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/readimage.js" afterPath="$PROJECT_DIR$/js/readimage.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -42,31 +41,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readimage.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="readimage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/readimage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="140" column="2" selection-start-line="140" selection-start-column="2" selection-end-line="140" selection-end-column="2" />
+            <state relative-caret-position="364">
+              <caret line="84" column="30" selection-start-line="84" selection-start-column="30" selection-end-line="84" selection-end-column="30" />
               <folding>
                 <element signature="n#!!block;n#drag#0" expanded="false" />
                 <element signature="e#778#1936#0" expanded="false" />
-                <element signature="n#!!block;n#rotateImg#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="demo.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../cslPlugin-master/demo.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cslCamera.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cslCamera.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/cslCamera.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="247">
@@ -92,8 +80,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/readimage.js" />
         <option value="$PROJECT_DIR$/js/cslCamera.js" />
+        <option value="$PROJECT_DIR$/js/readimage.js" />
       </list>
     </option>
   </component>
@@ -269,12 +257,12 @@
       <option name="presentableId" value="Default" />
       <updated>1509099991373</updated>
       <workItem from="1509099993529" duration="10730000" />
-      <workItem from="1509116299256" duration="8751000" />
+      <workItem from="1509116299256" duration="9112000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19481000" />
+    <option name="totallyTimeSpent" value="19842000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -339,20 +327,11 @@
           <folding>
             <element signature="n#!!block;n#drag#0" expanded="false" />
             <element signature="e#778#1936#0" expanded="false" />
-            <element signature="n#!!block;n#rotateImg#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Desktop/camera2/js/readimage.js" />
-    <entry file="file://$PROJECT_DIR$/../cslPlugin-master/demo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2548">
@@ -368,23 +347,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/readimage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="140" column="2" selection-start-line="140" selection-start-column="2" selection-end-line="140" selection-end-column="2" />
-          <folding>
-            <element signature="n#!!block;n#drag#0" expanded="false" />
-            <element signature="e#778#1936#0" expanded="false" />
-            <element signature="n#!!block;n#rotateImg#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/cslCamera.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../cslPlugin-master/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/readimage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="84" column="30" selection-start-line="84" selection-start-column="30" selection-end-line="84" selection-end-column="30" />
+          <folding>
+            <element signature="n#!!block;n#drag#0" expanded="false" />
+            <element signature="e#778#1936#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

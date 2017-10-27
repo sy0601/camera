@@ -202,16 +202,18 @@ var a_oDiv;
 
 function draw(fn){
     if(isWin){
-        a_oLayer = $("#layer").css("background").split('(')[2].split('"')[1];
+        /*a_oLayer = $("#layer").css("background").split('(')[2].split('"')[1];*/
         a_oDiv = $("#addImg").css("background").split('(')[2].split('"')[1];
     }else if(isiOS){
-        a_oLayer = $("#layer").css("background").toString().split('(')[2].split(')')[0];
+        /*a_oLayer = $("#layer").css("background").toString().split('(')[2].split(')')[0];*/
         a_oDiv = $("#addImg").css("background").toString().split('(')[2].split(')')[0];
     }else{
-        a_oLayer = $("#layer").css("background").split('(')[2].split('"')[1].split('"')[0];
+        /*a_oLayer = $("#layer").css("background").split('(')[2].split('"')[1].split('"')[0];*/
         a_oDiv = $("#addImg").css("background").split('(')[2].split('"')[1].split('"')[0];
     }
-	var data= [a_oLayer,oPicture.src,a_oDiv];
+    var mask = document.createElement('img');
+    mask.src = oLayer.getAttribute('data-mask');
+    var data= [oPicture.src,mask.src,a_oDiv];
 	var c=document.createElement('canvas'),
 		ctx=c.getContext('2d'),
 		len=data.length;
@@ -227,9 +229,9 @@ function draw(fn){
 			img.crossOrigin="anonymous";
 			img.onload =function(){
                 if(n == 0){
-                    ctx.drawImage(img,0,0,oLayer.clientWidth,oLayer.clientHeight);
-                }else if(n == 1){
                     ctx.drawImage(img,oPicture.offsetLeft,nodes.offsetTop,oPicture.clientWidth,oPicture.clientHeight);
+                }else if(n == 1){
+                    ctx.drawImage(img,0,0,oLayer.clientWidth,oLayer.clientHeight);
                 }else if(n == 2){
                     ctx.drawImage(img,oDiv.offsetLeft,oDiv.offsetTop,oDiv.clientWidth,oDiv.clientHeight);
                 }

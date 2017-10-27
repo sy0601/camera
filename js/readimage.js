@@ -169,7 +169,6 @@ document.addEventListener('DOMContentLoaded',function(){
 	drag(oDiv);
 	/*drag(nodes);*/
 },false);
-
 /*合成图片*/
 function hecheng(){
 	if(oPicture.src.indexOf('http') != -1){
@@ -182,8 +181,10 @@ function hecheng(){
 		$('.icon').css('display','none');
 		/*var oImg = '<img style="width: 100%;" src="'+base64[0]+'">';*/
 		var oImg = new Image;
+		oImg.style.width = '100%';
+		oImg.style.height = '100%';
 		oImg.onload = function(){
-            $('#imgBox').css({'position':'absolute','left':0,'right':0}).html(oImg);
+            $('#imgBox').css({width: '375px',height:'604px',position:'absolute',left:0,top:0}).html(oImg);
 		};
         oImg.src = base64[0];
 	})

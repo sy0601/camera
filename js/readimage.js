@@ -182,7 +182,6 @@ function hecheng(){
 		$('.icon').css('display','none');
 		/*var oImg = '<img style="width: 100%;" src="'+base64[0]+'">';*/
 		var oImg = new Image;
-		oImg.style.width = '100%';
 		oImg.onload = function(){
             $('#imgBox').css({'position':'absolute','left':0,'right':0}).html(oImg);
 		};

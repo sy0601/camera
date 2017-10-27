@@ -3,7 +3,25 @@
 var img_data = {"imgList":[]};
 //图片选择总数
 var selectImgCount = 0;
-
+/*拖拽*/
+function drag(obj){
+	obj.addEventListener('touchstart',function(ev){
+		var disX = ev.targetTouches[0].pageX - obj.offsetLeft;
+		var disY = ev.targetTouches[0].pageY - obj.offsetTop;
+		console.log()
+		function fnMove(ev){
+			obj.style.left = ev.targetTouches[0].pageX - disX +'px';
+			obj.style.top = ev.targetTouches[0].pageY - disY +'px';
+		}
+		function fnEnd(){
+			obj.removeEventListener('touchmove',fnMove,false);
+			obj.removeEventListener('touchend',fnEnd,false);
+		}
+		obj.addEventListener('touchmove',fnMove,false);
+		obj.addEventListener('touchend',fnEnd,false);
+		ev.preventDefault();
+	},false);
+}
 var file_upload=function (picture,file) {
     if (picture.file.type.match('image.*')) {
         var w_h=0;
@@ -46,31 +64,11 @@ var file_upload=function (picture,file) {
         alert("请选择正确的图片格式上传");
     }
 };
-/*拖拽*/
-function drag(obj){
-    obj.addEventListener('touchstart',function(ev){
-        var disX = ev.targetTouches[0].pageX - obj.offsetLeft;
-        var disY = ev.targetTouches[0].pageY - obj.offsetTop;
-		console.log()
-        function fnMove(ev){
-            obj.style.left = ev.targetTouches[0].pageX - disX +'px';
-            obj.style.top = ev.targetTouches[0].pageY - disY +'px';
-			console.log(obj.offsetLeft,obj.offsetTop);
-        }
-        function fnEnd(){
-            obj.removeEventListener('touchmove',fnMove,false);
-            obj.removeEventListener('touchend',fnEnd,false);
-        }
-        obj.addEventListener('touchmove',fnMove,false);
-        obj.addEventListener('touchend',fnEnd,false);
-        ev.preventDefault();
-    },false);
-}
 // 图片旋转操作，以及对图片压缩的处理。
 var nodes = document.getElementById("pictureInfo");
 function rotateImg(Orientation,ctx,canvas,that,w,h) {
 //	alert(Orientation);
-	if(Orientation == "6") {
+	/*if(Orientation == "6") {
 		$(canvas).attr({width : w/2, height : h});
     	ctx.translate(270, 0);
 	    var angle = 90;
@@ -89,7 +87,7 @@ function rotateImg(Orientation,ctx,canvas,that,w,h) {
 	
 	}
     var strLength=base64.length;
-    var fileLength=parseInt(strLength-(strLength/8)*2);
+    var fileLength=parseInt(strLength-(strLength/8)*2);*/
 	
 	//图片大小
     var oriSize = (fileLength / 1024).toFixed(1);
@@ -125,29 +123,23 @@ function rotateImg(Orientation,ctx,canvas,that,w,h) {
    	}*/
 }
 /*添加图片开始*/
-document.getElementById("files_upload1").addEventListener("change",function(e) {
-	var files = e.currentTarget.files;
-	/*var fileCount=files.length;
-	if(fileCount>5 || selectImgCount+fileCount>5){
-	    alert("最多上传5张图片！");
-	    return false;
-	}else {*/
-    	$.each(files, function (index, file) {
-	        var fileReader = new FileReader();
-	        var obj_callback=new Object();
-	        //读取文件加载Load 事件
-	        fileReader.onload = (function (file) {
-	            return function (e) {
-	                obj_callback.file=file;
-	                obj_callback.e=e;
-	                file_upload(obj_callback,file);
-	            };
-	        })(file);
-        	//读取图像文件
-            fileReader.readAsDataURL(file);
-        });
-    /*}*/
-},false);
+var callBack = function(files) {
+	$.each(files, function (index, file) {
+		var fileReader = new FileReader();
+		var obj_callback=new Object();
+		//读取文件加载Load 事件
+		fileReader.onload = (function (file) {
+			return function (e) {
+				obj_callback.file=file;
+				obj_callback.e=e;
+				file_upload(obj_callback,file);
+			};
+		})(file);
+		//读取图像文件
+		fileReader.readAsDataURL(file);
+	});
+};
+var carera=new $.Pgater($("#files_upload1"),callBack);
 /*换图*/
 var oDiv = document.getElementById("addImg");
 var oImgCon = document.getElementById('place1');
@@ -234,7 +226,6 @@ function draw(fn){
                 }else if(n == 1){
                     ctx.drawImage(img,0,0,oLayer.clientWidth,oLayer.clientHeight);
                 }else if(n == 2){
-					console.log('aa',oDiv.offsetLeft,oDiv.offsetTop);
                     ctx.drawImage(img,oDiv.offsetLeft,oDiv.offsetTop,oDiv.clientWidth,oDiv.clientHeight);
                 }
                 drawing(n+1);

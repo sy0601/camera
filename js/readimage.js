@@ -55,6 +55,7 @@ function drag(obj){
         function fnMove(ev){
             obj.style.left = ev.targetTouches[0].pageX - disX +'px';
             obj.style.top = ev.targetTouches[0].pageY - disY +'px';
+			console.log(obj.offsetLeft,obj.offsetTop);
         }
         function fnEnd(){
             obj.removeEventListener('touchmove',fnMove,false);
@@ -233,6 +234,7 @@ function draw(fn){
                 }else if(n == 1){
                     ctx.drawImage(img,0,0,oLayer.clientWidth,oLayer.clientHeight);
                 }else if(n == 2){
+					console.log('aa',oDiv.offsetLeft,oDiv.offsetTop);
                     ctx.drawImage(img,oDiv.offsetLeft,oDiv.offsetTop,oDiv.clientWidth,oDiv.clientHeight);
                 }
                 drawing(n+1);

@@ -187,10 +187,7 @@ function hecheng(){
 	}
 
 	alert('生成后长按保存，“鬼混”照片晒到朋友圈');
-	var oP = $('<p class="info">正在合成中，请稍后...</p>');
-	oBg.appendChild(oP);
 	draw(function(){
-		oP.css('display','none');
 		oLayer.style.display = 'none';
 		$('.imageShow').css('display','none');
 		$('.icon').css('display','none');

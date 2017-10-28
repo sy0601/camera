@@ -146,7 +146,6 @@ function start(){
 	oPage.style.display = 'none';
 }
 /*换图*/
-var oBg = $('#bg');
 var oDiv = document.getElementById("addImg");
 var oImgCon = document.getElementById('place1');
 var oLayer = document.getElementById('layer');
@@ -185,11 +184,8 @@ function hecheng(){
 		alert('请选择照片');
 		return false;
 	}
-	var oP = $('<p class="info">正在合成中，请稍后...</p>');
-	oBg.appendChild(oP);
 	alert('生成后长按保存，“鬼混”照片晒到朋友圈');
 	draw(function(){
-		oP.css('display','none');
 		oLayer.style.display = 'none';
 		$('.imageShow').css('display','none');
 		$('.icon').css('display','none');

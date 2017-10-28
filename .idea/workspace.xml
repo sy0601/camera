@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="62d62922-530f-46fd-ad95-6f4468f9538a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/mask.png" afterPath="$PROJECT_DIR$/img/mask.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/readimage.js" afterPath="$PROJECT_DIR$/js/readimage.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -44,8 +41,8 @@
       <file leaf-file-name="readimage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/readimage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="186" column="27" selection-start-line="186" selection-start-column="27" selection-end-line="186" selection-end-column="27" />
+            <state relative-caret-position="136">
+              <caret line="186" column="30" selection-start-line="186" selection-start-column="30" selection-end-line="186" selection-end-column="30" />
               <folding>
                 <element signature="n#!!block;n#drag#0" expanded="false" />
                 <element signature="e#778#1936#0" expanded="false" />
@@ -255,12 +252,12 @@
       <workItem from="1509099993529" duration="10730000" />
       <workItem from="1509116299256" duration="9728000" />
       <workItem from="1509176575039" duration="1597000" />
-      <workItem from="1509190258916" duration="4063000" />
+      <workItem from="1509190258916" duration="4670000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26118000" />
+    <option name="totallyTimeSpent" value="26725000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -419,8 +416,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/readimage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="186" column="27" selection-start-line="186" selection-start-column="27" selection-end-line="186" selection-end-column="27" />
+        <state relative-caret-position="136">
+          <caret line="186" column="30" selection-start-line="186" selection-start-column="30" selection-end-line="186" selection-end-column="30" />
           <folding>
             <element signature="n#!!block;n#drag#0" expanded="false" />
             <element signature="e#778#1936#0" expanded="false" />

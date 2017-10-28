@@ -184,7 +184,7 @@ function hecheng(){
 		alert('请选择照片');
 		return false;
 	}
-	alert('生成图片后，长按保存到相册');
+	alert('生成后长按保存，“鬼混”照片晒到朋友圈');
 	draw(function(){
 		oLayer.style.display = 'none';
 		$('.imageShow').css('display','none');

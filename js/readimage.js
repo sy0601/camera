@@ -140,6 +140,11 @@ var callBack = function(files) {
 	});
 };
 var carera=new $.Pgater($("#files_upload1"),callBack);
+/*start*/
+var oPage = document.getElementById('page');
+function start(){
+	oPage.style.display = 'none';
+}
 /*换图*/
 var oDiv = document.getElementById("addImg");
 var oImgCon = document.getElementById('place1');
@@ -158,6 +163,17 @@ function addImg(){
     oDiv.classList.remove('img'+(count-1));
     oDiv.classList.add('img'+count);
 }
+function reduceImg(){
+	count = count - 1;
+	if( count == -1){
+		oDiv.classList.remove('img'+(count+1));
+		count = 8;
+		oDiv.classList.add('img8');
+		return;
+	}
+	oDiv.classList.remove('img'+(count+1));
+	oDiv.classList.add('img'+count);
+}
 document.addEventListener('DOMContentLoaded',function(){
 	drag(oDiv);
 	/*drag(nodes);*/
@@ -168,6 +184,7 @@ function hecheng(){
 		alert('请选择照片');
 		return false;
 	}
+	alert('生成图片后，长按保存到相册');
 	draw(function(){
 		oLayer.style.display = 'none';
 		$('.imageShow').css('display','none');

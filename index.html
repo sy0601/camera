@@ -6,21 +6,31 @@
 		<title>H5调用 相机相册</title>
 		<style type="text/css">
 			body{margin: 0;width: 100%; height: 100%;background: #660033; }
+			.page{
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				width: 100%;
+				height: 100%;
+			}
+			.page img{
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
 			.bg{ width: 375px;
 				height: 604px;
-				background: url("img/mask.png") no-repeat; background-size: contain; -webkit-background-size: contain;
+				background: url("img/bg.png") no-repeat; background-size: cover; -webkit-background-size: cover;
 				position: absolute;
 				left: 50%;
 				top: 50%;
 				margin-top: -302px;
 				margin-left: -187px;
 			}
-			#upload{border-top: 1px #CCC solid;}
-			#place6{/*background-image: url(img/add.png); background-repeat: no-repeat;background-position:.6em;background-size: 3em;background-position-x: 47%;*/ background-color: #660033;}
 			.imageShow{position: absolute; bottom: 1em;left: 0;height: 4.5em;width: 100%;margin-top: 10px;}
-			.imageShow div{float: left;margin-left: 8%;width: 24%;height: 2.5em; font-size: 1em; color:#fff;text-align: center;line-height: 2.5em;font-weight: 600;-webkit-border-radius:1em;-moz-border-radius:1em; border-radius: 1em;background-color: #660033;}
-			/*#imageInfo{border: 0px #f00 solid;position: absolute;top: 8em;right: 0;left: 0;bottom: 0;background-color: black;color: white;font-size: 14px;padding-left: 10px;overflow: auto;}*/
-
+			.imageShow div{float: left;margin-left: 5%;width: 9.75em;height: 3.344em; }
 			#layer{ width: 100%;
 				position: absolute;top: 0;bottom: 0;left: 0;right: 0;
 				background: #000; align-items: center;justify-content: center;display: flex;
@@ -130,6 +140,27 @@
 				-webkit-background-size: cover;
 				background-size: cover;
 			}
+			#files_upload1{
+				background: url("img/start.png") no-repeat;
+				-webkit-background-size: cover;
+				background-size: cover;
+			}
+			#end{
+				background: url("img/end.png") no-repeat;
+				-webkit-background-size: cover;
+				background-size: cover;
+			}
+			.first_icon{
+				width: 9.75em;
+				height: 2.75em;
+				background: url("img/go.png") no-repeat;
+				-webkit-background-size: cover;
+				background-size: cover;
+				position: absolute;
+				left: 50%;
+				margin-left: -4.875em;
+				top: 90%;
+			}
 			.icon{
 				width: 2.937em;
 				height: 2.75em;
@@ -138,6 +169,16 @@
 				background-size: cover;
 				position: absolute;
 				right: 2em;
+				top: 8.375em;
+			}
+			.icon1{
+				width: 2.937em;
+				height: 2.75em;
+				background: url("img/icon1.png") no-repeat;
+				-webkit-background-size: cover;
+				background-size: cover;
+				position: absolute;
+				left: 2em;
 				top: 8.375em;
 			}
 		</style>
@@ -161,18 +202,16 @@
 			<div id="addImg" class="img0"></div>
 			<!-- 图片放置区域 -->
 			<div class="imageShow">
-
-				<div id="place6">
-					<label for="files_upload1" id="upload">
-						<div id="files_upload1" style="width: 100%;">添加图片</div>
-					</label>
-				</div>
-				<div style="width: 24%; float:right; margin-right: 10%;" onclick="hecheng()">
-					<div style="width: 100%;">点击合成</div>
-				</div>
+				<div id="files_upload1"></div>
+				<div id="end" style="float:right; margin-left: 0; margin-right: 5%;" onclick="hecheng()"></div>
 			</div>
 			<div class="icon" onclick="addImg()"></div>
+			<div class="icon1" onclick="reduceImg()"></div>
 			<div id="imgBox"></div>
+		</div>
+		<div class="page" id="page">
+			<img src="img/page.jpg" alt="" width="100%" height="100%" />
+			<div id="#icon" onclick="start()" class="first_icon"></div>
 		</div>
 	</body>
 	<script src="js/jquery-2.1.3.js"></script>

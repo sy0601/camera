@@ -142,11 +142,12 @@ var callBack = function(files) {
 var carera=new $.Pgater($("#files_upload1"),callBack);
 /*start*/
 var oPage = document.getElementById('page');
+var oBg = $('#bg');
 function start(){
 	oPage.style.display = 'none';
+	oBg.css('display','block');
 }
 /*换图*/
-var oBg = $('#bg');
 var oDiv = document.getElementById("addImg");
 var oImgCon = document.getElementById('place1');
 var oLayer = document.getElementById('layer');

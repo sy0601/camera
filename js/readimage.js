@@ -182,8 +182,6 @@ document.addEventListener('DOMContentLoaded',function(){
 },false);
 /*合成图片*/
 function hecheng(){
-
-	alert('生成后长按保存，“鬼混”照片晒到朋友圈');
 	var oP = $('<p class="info">正在合成中，请稍后...</p>');
 	oBg.append(oP);
 	draw(function(){
@@ -199,6 +197,7 @@ function hecheng(){
             $('#imgBox').css({width: '375px',height:'604px',position:'absolute',left:0,top:0}).html(oImg);
 		};
         oImg.src = base64[0];
+        alert('生成后长按保存');
 	})
 }
 var u = navigator.userAgent;
@@ -226,7 +225,6 @@ function draw(fn){
     var mask = document.createElement('img');
     mask.src = oLayer.getAttribute('data-mask');
     var data= [oPicture.src,mask.src,a_oDiv];
-    console.log(data);
     if(oPicture.src.indexOf(window.location.hostname) == -1){
         data= [oPicture.src,mask.src,a_oDiv];
     }else{

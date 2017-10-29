@@ -195,7 +195,7 @@ function hecheng(){
 		oImg.style.height = '100%';
 		oImg.onload = function(){
             $('#imgBox').css({width: '375px',height:'604px',position:'absolute',left:0,top:0}).html(oImg);
-            alert('生成后长按保存');
+            alert('长按保存');
 		};
         oImg.src = base64[0];
 	})

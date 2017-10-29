@@ -182,11 +182,16 @@ document.addEventListener('DOMContentLoaded',function(){
 },false);
 /*合成图片*/
 function hecheng(){
-    alert('生成后长按保存，“鬼混”照片晒到朋友圈');
-	var oP = $('<p class="info">正在合成中，请稍后...</p>');
-	oBg.append(oP);
+	/*if(oPicture.src.indexOf('http') != -1){
+		alert('请选择照片');
+		return false;
+	}*/
+
+	alert('生成后长按保存，“鬼混”照片晒到朋友圈');
+	/*var oP = $('<p class="info">正在合成中，请稍后...</p>');
+	oBg.append(oP);*/
 	draw(function(){
-		oP.css('display','none');
+		/*oP.css('display','none');*/
 		oLayer.style.display = 'none';
 		$('.imageShow').css('display','none');
 		$('.icon').css('display','none');
@@ -225,6 +230,12 @@ function draw(fn){
     var mask = document.createElement('img');
     mask.src = oLayer.getAttribute('data-mask');
     var data= [oPicture.src,mask.src,a_oDiv];
+    console.log(data);
+    if(oPicture.src.indexOf(window.location.hostname) == -1){
+        data= [oPicture.src,mask.src,a_oDiv];
+    }else{
+        data= [mask.src,a_oDiv]
+    }
 	var c=document.createElement('canvas'),
 		ctx=c.getContext('2d'),
 		len=data.length;
@@ -239,12 +250,27 @@ function draw(fn){
             /*img.src = data[n];*/
 			img.crossOrigin="anonymous";
 			img.onload =function(){
-                if(n == 0){
+                /*if(n == 0){
                     ctx.drawImage(img,oPicture.offsetLeft,oPicture.offsetTop,oPicture.clientWidth,oPicture.clientHeight);
                 }else if(n == 1){
                     ctx.drawImage(img,0,0,oLayer.clientWidth,oLayer.clientHeight);
                 }else if(n == 2){
                     ctx.drawImage(img,oDiv.offsetLeft,oDiv.offsetTop,oDiv.clientWidth,oDiv.clientHeight);
+                }*/
+                if(len == 3){
+                    if(n == 0){
+                        ctx.drawImage(img,oPicture.offsetLeft,oPicture.offsetTop,oPicture.clientWidth,oPicture.clientHeight);
+                    }else if(n == 1){
+                        ctx.drawImage(img,0,0,oLayer.clientWidth,oLayer.clientHeight);
+                    }else if(n == 2){
+                        ctx.drawImage(img,oDiv.offsetLeft,oDiv.offsetTop,oDiv.clientWidth,oDiv.clientHeight);
+                    }
+                }else{
+                    if(n == 0){
+                        ctx.drawImage(img,0,0,oLayer.clientWidth,oLayer.clientHeight);
+                    }else if(n == 1){
+                        ctx.drawImage(img,oDiv.offsetLeft,oDiv.offsetTop,oDiv.clientWidth,oDiv.clientHeight);
+                    }
                 }
                 drawing(n+1);
 			};

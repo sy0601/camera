@@ -182,12 +182,7 @@ document.addEventListener('DOMContentLoaded',function(){
 },false);
 /*合成图片*/
 function hecheng(){
-	if(oPicture.src.indexOf('http') != -1){
-		alert('请选择照片');
-		return false;
-	}
-
-	alert('生成后长按保存，“鬼混”照片晒到朋友圈');
+    alert('生成后长按保存，“鬼混”照片晒到朋友圈');
 	var oP = $('<p class="info">正在合成中，请稍后...</p>');
 	oBg.append(oP);
 	draw(function(){

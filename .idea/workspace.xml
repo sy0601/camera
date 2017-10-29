@@ -47,8 +47,8 @@
       <file leaf-file-name="readimage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/readimage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="272" column="21" selection-start-line="272" selection-start-column="21" selection-end-line="272" selection-end-column="21" />
+            <state relative-caret-position="182">
+              <caret line="189" column="33" selection-start-line="189" selection-start-column="8" selection-end-line="189" selection-end-column="33" />
               <folding>
                 <element signature="n#!!block;n#drag#0" expanded="false" />
                 <element signature="e#778#1936#0" expanded="false" />
@@ -250,12 +250,12 @@
       <workItem from="1509202792578" duration="1326000" />
       <workItem from="1509229842614" duration="3255000" />
       <workItem from="1509234300708" duration="536000" />
-      <workItem from="1509248910614" duration="1502000" />
+      <workItem from="1509248910614" duration="1673000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33994000" />
+    <option name="totallyTimeSpent" value="34165000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -574,8 +574,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/readimage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="272" column="21" selection-start-line="272" selection-start-column="21" selection-end-line="272" selection-end-column="21" />
+        <state relative-caret-position="182">
+          <caret line="189" column="33" selection-start-line="189" selection-start-column="8" selection-end-line="189" selection-end-column="33" />
           <folding>
             <element signature="n#!!block;n#drag#0" expanded="false" />
             <element signature="e#778#1936#0" expanded="false" />
